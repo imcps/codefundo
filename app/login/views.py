@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
+from django.contrib import messages
 
 # Create your views here.
 def login(request):
@@ -17,7 +18,7 @@ def registerView(request):
 		username = getUsername(email)
 
 		if password1 != password2:
-			message.warning(request, "passwords do not match", fail_silently=True)
+			messages.warning(request, "passwords do not match", fail_silently=True)
 			return render(request, 'login.html')
 
     	user = User.objects.create_user(username=username, email=email)
@@ -38,4 +39,8 @@ def loginView(request):
 
 
 def getUsername(email):
-	return "user"
+    email = str(email)
+    index = email.index('@')
+
+    answer = email[:index]
+    return answer

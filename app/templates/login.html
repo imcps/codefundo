@@ -49,6 +49,9 @@
     </form>
     <form class="email-signup" action={% url 'login:registerView' %} method="post">
       {% csrf_token %}
+     <!--  <div class="u-form-group">
+        <input type="text" name="uname" placeholder="UserName"/>
+      </div> -->
       <div class="u-form-group">
         <input type="email" name="email" placeholder="Email"/>
       </div>
