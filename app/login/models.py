@@ -14,7 +14,7 @@ class Advertisment(models.Model):
 	user = models.OneToOneField(User)
 	name = models.CharField(max_length=50)
 	title = models.CharField(max_length=100)
-	category = models.integerField(categories)
+	category = models.IntegerField(categories)
 	description = models.CharField(max_length=500)
 	mobileNumber = models.BigIntegerField()
 	address = models.CharField(max_length=250)

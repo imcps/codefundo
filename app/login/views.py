@@ -5,8 +5,11 @@ from django.contrib.auth import authenticate
 from django.contrib import messages
 
 # Create your views here.
+def landing(request):
+	return render(request, 'landing.html')
+
 def login(request):
-	return render(request, 'login.html')
+	return render(request, 'login.html')	
 
 def registerView(request):
 	if request.method == 'POST':
