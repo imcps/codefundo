@@ -18,7 +18,3 @@ class Advertisment(models.Model):
 	description = models.CharField(max_length=500)
 	mobileNumber = models.BigIntegerField()
 	address = models.CharField(max_length=250)
-
-
-
-
