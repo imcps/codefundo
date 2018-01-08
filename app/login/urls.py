@@ -9,4 +9,6 @@ urlpatterns = [
 	url(r'^signin$', login, name='login'),
 	url(r'^login/$', loginView, name='loginView'),
 	url(r'^register/$', registerView, name='registerView'),
+	url(r'^home/$',home,name='home'),
+	url(r'^ad/$',ad,name='ad')
 ]

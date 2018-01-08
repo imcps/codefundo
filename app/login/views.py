@@ -27,7 +27,7 @@ def registerView(request):
     	user = User.objects.create_user(username=username, email=email)
     	user.set_password(password1)
     	user.save()
-    	return HttpResponse('<h1>SUCCESS !!</h1>')
+    	return render(request,'home.html')
 
 def loginView(request):
 	if request.method == 'POST':
@@ -38,7 +38,7 @@ def loginView(request):
 		user = authenticate(username=username, email=email, password=password)
 
 		if user is not None:
-			return HttpResponse('<h1>login Success</h1>')
+			return render(request,'home.html')
 
 
 def getUsername(email):
@@ -47,3 +47,12 @@ def getUsername(email):
 
     answer = email[:index]
     return answer
+
+def home(request):
+    # if request.user.is_authenticated():
+         return render(request,'home.html')
+    # else:
+    #      return redirect("/login")  
+
+def ad(request):
+	return render(request,'ad.html')
