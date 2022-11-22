@@ -42,7 +42,7 @@ oauthlib==1.1.2
 pandas==0.21.0
 pathlib==1.0.1
 pew==1.1.2
-Pillow==3.3.0
+Pillow==9.3.0
 pipenv==9.0.1
 psutil==5.3.1
 psycopg2==2.6.2
